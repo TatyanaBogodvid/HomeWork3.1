@@ -14,11 +14,13 @@ public class RecipeServiceImpl implements RecipesService {
     private static Map<Long, Recipe> recipes = new TreeMap<>();
     private static long generateId = 1L;
 
-
+    @Override
     public void addRecipe(Recipe recipe){
         recipes.put(generateId, recipe);
         generateId++;
     }
+
+    @Override
     public Recipe getRecipe(Long id){
         return recipes.get(id);
     }
