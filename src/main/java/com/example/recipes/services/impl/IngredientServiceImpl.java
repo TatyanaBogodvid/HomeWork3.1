@@ -14,13 +14,17 @@ public class IngredientServiceImpl implements IngredientService {
     private static long generateId = 1L;
 
     @Override
-    public void addIngredient(Ingredient ingredient){
+    public long addIngredient(Ingredient ingredient){
         ingredients.put(generateId, ingredient);
-        generateId++;
+        return generateId++;
     }
 
     @Override
     public Ingredient getIngredient(Long id){
-        return ingredients.get(id);
+        Ingredient ingredient = ingredients.get(id);
+        if(ingredient != null){
+            return ingredient;
+        }
+        return null;
     }
 }

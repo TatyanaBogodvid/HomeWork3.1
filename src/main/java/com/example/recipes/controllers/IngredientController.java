@@ -3,6 +3,7 @@ package com.example.recipes.controllers;
 import com.example.recipes.model.Ingredient;
 import com.example.recipes.model.Recipe;
 import com.example.recipes.services.IngredientService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,15 +16,19 @@ public class IngredientController {
         this.ingredientService = ingredientService;
     }
 
-    @GetMapping("/api/getById")
-    public Ingredient ingredient(@RequestParam long id){
-        return ingredientService.getIngredient(id);
+    @GetMapping("{id}")
+    public ResponseEntity<Ingredient> getIngredientById(@PathVariable long id){
+        Ingredient ingredient = ingredientService.getIngredient(id);
+        if(ingredient == null){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(ingredient);
     }
 
-    @PostMapping("/api/new")
-    public Ingredient createIngredient(@RequestParam Ingredient ingredient){
-        ingredientService.addIngredient(ingredient);
-        return ingredient;
+    @PostMapping("/new")
+    public ResponseEntity<Long> createIngredient(@RequestBody Ingredient ingredient){
+        long id = ingredientService.addIngredient(ingredient);
+        return ResponseEntity.ok().body(id);
     }
 
 }
