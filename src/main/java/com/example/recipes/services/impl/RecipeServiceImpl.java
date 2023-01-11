@@ -28,4 +28,38 @@ public class RecipeServiceImpl implements RecipeService {
         }
         return null;
     }
+
+    @Override
+    public Recipe getAllRecipe(){
+        for(Recipe recipe : recipes.values()){
+            if(recipe != null) {
+                return recipe;
+            }
+        }
+        return  null;
+    }
+
+    @Override
+    public Recipe editRecipe(long id, Recipe recipe){
+        if(recipes.containsKey(id)){
+            recipes.put(id, recipe);
+            return recipe;
+        }
+        return  null;
+    }
+
+    @Override
+    public boolean deleteRecipe(Long id){
+        if(recipes.containsKey(id)){
+            recipes.remove(id);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void deleteAllRecipe(){
+        recipes = new TreeMap<>();
+    }
+
 }

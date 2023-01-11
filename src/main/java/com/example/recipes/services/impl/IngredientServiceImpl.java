@@ -1,7 +1,6 @@
 package com.example.recipes.services.impl;
 
 import com.example.recipes.model.Ingredient;
-import com.example.recipes.model.Recipe;
 import com.example.recipes.services.IngredientService;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +25,38 @@ public class IngredientServiceImpl implements IngredientService {
             return ingredient;
         }
         return null;
+    }
+
+    @Override
+    public Ingredient getAllIngredient(){
+        for(Ingredient ingredient : ingredients.values()){
+            if(ingredient != null) {
+                return ingredient;
+            }
+        }
+        return  null;
+    }
+
+    @Override
+    public Ingredient editIngredient(long id, Ingredient ingredient){
+        if(ingredients.containsKey(id)){
+            ingredients.put(id, ingredient);
+            return ingredient;
+        }
+        return  null;
+    }
+
+    @Override
+    public boolean deleteIngredient(Long id){
+        if(ingredients.containsKey(id)){
+            ingredients.remove(id);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void deleteAllIngredient(){
+        ingredients = new TreeMap<>();
     }
 }
