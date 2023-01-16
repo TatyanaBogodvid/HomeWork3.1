@@ -13,9 +13,9 @@ public class FirstController {
 
     @GetMapping("/info")
     public String info(){
-        return "Богодвид Татьяна; "+"\n"+
-        "Recipes; "+"\n"+
-        "02.01.2023; "+"\n"+
+        return "Богодвид Татьяна; "+"<br>"+
+        "Recipes; "+"<br>"+
+        "02.01.2023; "+"<br>"+
         "Хранение, добавление и удаление рецептов.";
     }
 }

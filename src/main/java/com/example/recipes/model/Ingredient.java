@@ -1,7 +1,14 @@
 package com.example.recipes.model;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Ingredient {
     private String name;
     private int ingredientQuantity;
-    private String UnitOfMeasure;
+    private String measureUnit;
 }
+

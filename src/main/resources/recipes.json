@@ -7,7 +7,7 @@
       {
         "name": "Творог",
         "weight": 350,
-        "measureUnitWeight": "г."
+        "measureUnit": "г."
       },
       {
         "name": "Куриное яйцо",
