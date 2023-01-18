@@ -1,7 +1,6 @@
 package com.example.recipes.services.impl;
 
 import com.example.recipes.model.Ingredient;
-import com.example.recipes.services.FilesService;
 import com.example.recipes.services.IngredientService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -14,13 +13,14 @@ import java.util.TreeMap;
 
 @Service
 public class IngredientServiceImpl implements IngredientService {
-    private final FilesService filesService;
+    private final FilesServiceIngImpl filesService;
     private static Map<Long, Ingredient> ingredients = new TreeMap<>();
     private static long generateId = 1L;
 
-    public IngredientServiceImpl(FilesService filesService) {
+    public IngredientServiceImpl(FilesServiceIngImpl filesService) {
         this.filesService = filesService;
     }
+
 
     @Override
     public long addIngredient(Ingredient ingredient){
@@ -29,10 +29,10 @@ public class IngredientServiceImpl implements IngredientService {
         return generateId++;
     }
 
-   /* @PostConstruct
+   @PostConstruct
     private void init() {
         readFromFile();
-    }*/
+    }
 
     @Override
     public Ingredient getIngredient(Long id){

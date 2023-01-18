@@ -1,7 +1,6 @@
 package com.example.recipes.services.impl;
 
 import com.example.recipes.model.Recipe;
-import com.example.recipes.services.FilesService;
 import com.example.recipes.services.RecipeService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -16,18 +15,18 @@ import java.util.TreeMap;
 @Service
 public class RecipeServiceImpl implements RecipeService {
 
-    private final FilesService filesService;
+    private final FilesServiceRecImpl filesService;
     private static Map<Long, Recipe> recipes = new TreeMap<>();
     private static long generateId = 1L;
 
-    public RecipeServiceImpl(FilesService filesService) {
+    public RecipeServiceImpl(FilesServiceRecImpl filesService) {
         this.filesService = filesService;
     }
 
-    /*@PostConstruct
+    @PostConstruct
     private void init() {
         readFromFile();
-    }*/
+    }
 
     @Override
     public long addRecipe(Recipe recipe){
