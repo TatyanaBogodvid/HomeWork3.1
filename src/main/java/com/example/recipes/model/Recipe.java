@@ -12,6 +12,7 @@ import java.util.List;
 public class Recipe {
     private String name;
     private int cookingTime;
+    private String measureUnitTime;
     private List<Ingredient> ingredients;
     private List<String> steps;
 }

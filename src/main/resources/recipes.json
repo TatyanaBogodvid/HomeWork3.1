@@ -6,22 +6,22 @@
     "ingredients": [
       {
         "name": "Творог",
-        "weight": 350,
+        "ingredientQuantity": 350,
         "measureUnit": "г."
       },
       {
         "name": "Куриное яйцо",
-        "weight": 2,
+        "ingredientQuantity": 2,
         "measureUnit": "шт."
       },
       {
         "name": "Пшеничная мука",
-        "weight": 6,
+        "ingredientQuantity": 6,
         "measureUnit": "Ст. л."
       },
       {
         "name": "Сахар",
-        "weight": 2,
+        "ingredientQuantity": 2,
         "measureUnit": "Ст. л."
       }
     ],
@@ -41,42 +41,42 @@
     "ingredients": [
       {
         "name": "Специи",
-        "weight": 0,
+        "ingredientQuantity": 0,
         "measureUnitWeight": "по вкусу"
       },
       {
         "name": "Консервированная фасоль",
-        "weight": 400,
+        "ingredientQuantity": 400,
         "measureUnit": "г."
       },
       {
         "name": "Лимон",
-        "weight": 1,
+        "ingredientQuantity": 1,
         "measureUnit": "Шт."
       },
       {
         "name": "Чеснок",
-        "weight": 2,
+        "ingredientQuantity": 2,
         "measureUnit": "Зб."
       },
       {
         "name": "Оливковое масло",
-        "weight": 50,
+        "ingredientQuantity": 50,
         "measureUnit": "мл."
       },
       {
         "name": "Рукола",
-        "weight": 100,
+        "ingredientQuantity": 100,
         "measureUnit": "г."
       },
       {
         "name": "Творожный сыр",
-        "weight": 200,
+        "ingredientQuantity": 200,
         "measureUnit": "г."
       },
       {
         "name": "Красный лук ",
-        "weight": 50,
+        "ingredientQuantity": 50,
         "measureUnit": "г."
       }
     ],
@@ -93,52 +93,52 @@
     "ingredients": [
       {
         "name": "Красная чечевица",
-        "weight": 150,
+        "ingredientQuantity": 150,
         "measureUnitWeight": "г."
       },
       {
         "name": "Репчатый лук ",
-        "weight": 1,
+        "ingredientQuantity": 1,
         "measureUnit": "шт."
       },
       {
         "name": "Морковь",
-        "weight": 1,
+        "ingredientQuantity": 1,
         "measureUnit": "Шт."
       },
       {
         "name": "Подсолнечное масло",
-        "weight": 30,
+        "ingredientQuantity": 30,
         "measureUnit": "мл."
       },
       {
         "name": "Сливочное масло ",
-        "weight": 515,
+        "ingredientQuantity": 515,
         "measureUnit": "г."
       },
       {
         "name": "Пшеничная мука",
-        "weight": 30,
+        "ingredientQuantity": 30,
         "measureUnit": "г."
       },
       {
         "name": "Сливки 33%",
-        "weight": 50,
+        "ingredientQuantity": 50,
         "measureUnit": "мл."
       },
       {
         "name": "Специи",
-        "weight": 0,
+        "ingredientQuantity": 0,
         "measureUnit": "по вкусу"
       },
       {
         "name": "Лимон ",
-        "weight": 0.5,
+        "ingredientQuantity": 0.5,
         "measureUnit": "шт."
       },
       {
         "name": "Мята",
-        "weight": 0,
+        "ingredientQuantity": 0,
         "measureUnit": "по вкусу"
       }
     ],
@@ -156,37 +156,37 @@
     "ingredients": [
       {
         "name": "Помидоры",
-        "weight": 3,
+        "ingredientQuantity": 3,
         "measureUnitWeight": "шт."
       },
       {
         "name": "Королевские креветки",
-        "weight": 300,
+        "ingredientQuantity": 300,
         "measureUnit": "г."
       },
       {
         "name": "Зеленый салат",
-        "weight": 1,
+        "ingredientQuantity": 1,
         "measureUnit": "шт."
       },
       {
         "name": "Огурцы ",
-        "weight": 2,
+        "ingredientQuantity": 2,
         "measureUnit": "шт."
       },
       {
         "name": "Специи",
-        "weight": 0,
+        "ingredientQuantity": 0,
         "measureUnit": "по вкусу"
       },
       {
         "name": "Майонез",
-        "weight": 0,
+        "ingredientQuantity": 0,
         "measureUnit": "по вкусу"
       },
       {
         "name": "Кунжутные семечки",
-        "weight": 3,
+        "ingredientQuantity": 3,
         "measureUnit": "ст. л."
       }
     ],
@@ -205,37 +205,37 @@
     "ingredients": [
       {
         "name": "Творог",
-        "weight": 250,
+        "ingredientQuantity": 250,
         "measureUnitWeight": "г."
       },
       {
         "name": "Куриное яйцо",
-        "weight": 3,
+        "ingredientQuantity": 3,
         "measureUnit": "шт."
       },
       {
         "name": "Пшеничная мука",
-        "weight": 8,
+        "ingredientQuantity": 8,
         "measureUnit": "ст. л."
       },
       {
         "name": "Соль/сахар",
-        "weight": 0,
+        "ingredientQuantity": 0,
         "measureUnit": "по вкусу"
       },
       {
         "name": "Оливковое масло",
-        "weight": 0,
+        "ingredientQuantity": 0,
         "measureUnit": "по вкусу"
       },
       {
         "name": "Сода",
-        "weight": 0.5,
+        "ingredientQuantity": 0.5,
         "measureUnit": "ч.л."
       },
       {
         "name": "Сахарная пудра с ванилью",
-        "weight": 0,
+        "ingredientQuantity": 0,
         "measureUnit": "по вкусу"
       }
     ],
