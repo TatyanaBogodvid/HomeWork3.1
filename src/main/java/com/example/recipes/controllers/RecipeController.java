@@ -8,8 +8,15 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 @Tag(name = "RecipeController", description = "API для рецептов")
 @RestController
@@ -105,4 +112,16 @@ public class RecipeController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping(value = "/download")
+    public ResponseEntity<byte[]> downloadFile() {
+        byte[] data = recipesService.download();
+        if(data == null) {
+            return ResponseEntity.badRequest().build();
+        }
+            return ResponseEntity.ok()
+                    .contentLength(data.length)
+                    .contentType(MediaType.TEXT_PLAIN)
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"recipes.txt\"")
+                    .body(data);
+    }
 }

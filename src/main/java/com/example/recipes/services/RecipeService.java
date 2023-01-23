@@ -1,6 +1,7 @@
 package com.example.recipes.services;
 
 import com.example.recipes.model.Recipe;
+import org.springframework.lang.Nullable;
 
 public interface RecipeService {
     public long addRecipe(Recipe recipe);
@@ -14,4 +15,7 @@ public interface RecipeService {
     boolean deleteRecipe(Long id);
 
     void deleteAllRecipe();
+
+    @Nullable
+    byte[] download();
 }

@@ -1,14 +1,18 @@
 package com.example.recipes.model;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Ingredient {
     private String name;
     private int ingredientQuantity;
     private String measureUnit;
+
+    @Override
+    public String toString() {
+        return name + " - " + ingredientQuantity + " " + measureUnit;
+    }
 }
 

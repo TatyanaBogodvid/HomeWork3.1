@@ -5,11 +5,11 @@ import com.example.recipes.services.RecipeService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.io.File;
-import java.nio.file.Path;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -25,7 +25,7 @@ public class RecipeServiceImpl implements RecipeService {
         this.filesService = filesService;
     }
 
-    @PostConstruct
+   @PostConstruct
     private void init() {
         readFromFile();
     }
@@ -97,5 +97,15 @@ public class RecipeServiceImpl implements RecipeService {
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    @Nullable
+    public byte[] download(){
+        StringBuilder stringBuilder = new StringBuilder();
+        for(Recipe recipe : recipes.values()){
+            stringBuilder.append(recipe).append("\n").append("--------------------------").append("\n");
+        }
+        return stringBuilder.toString().getBytes(StandardCharsets.UTF_8);
     }
 }
