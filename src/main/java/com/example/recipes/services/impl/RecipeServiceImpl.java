@@ -92,7 +92,7 @@ public class RecipeServiceImpl implements RecipeService {
     private void readFromFile(){
         String json = filesService.readFromFile();
         try {
-            recipes = new ObjectMapper().readValue(json, new TypeReference<TreeMap>() {
+            recipes = new ObjectMapper().readValue(json, new TypeReference<TreeMap<Long,Recipe>>() {
             });
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);

@@ -1,6 +1,7 @@
 package com.example.recipes.services.impl;
 
 import com.example.recipes.model.Ingredient;
+import com.example.recipes.model.Recipe;
 import com.example.recipes.services.IngredientService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -89,7 +90,7 @@ public class IngredientServiceImpl implements IngredientService {
     private void readFromFile(){
         String json = filesService.readFromFile();
         try {
-            ingredients = new ObjectMapper().readValue(json, new TypeReference<TreeMap>() {
+            ingredients = new ObjectMapper().readValue(json, new TypeReference<TreeMap<Long, Ingredient>>() {
             });
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
